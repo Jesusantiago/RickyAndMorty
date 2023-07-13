@@ -1,0 +1,19 @@
+@use "./variables";
+@use "./header";
+@use "./loader";
+@use "./main";
+@use "./filter";
+@use "./listCharacter";
+@use "./mixin";
+@use "./status";
+@use "./listEpisodes";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    // overflow-y: hidden;
+};

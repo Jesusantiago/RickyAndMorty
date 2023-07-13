@@ -1,0 +1,31 @@
+@mixin media($width){
+    @media (max-width: $width){
+        @content;
+    }
+}
+
+
+@mixin font48{
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 800;
+}
+
+@mixin font32{
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 500;
+}
+
+@mixin font24{
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: 800;
+}
+
+@mixin font16{
+    font-size: clamp(12px, 3vw, 16px);
+    font-weight: 400;
+}
+
+@mixin font14{
+    font-size: clamp(10px, 3vw, 12px);
+    font-weight: 400;
+}

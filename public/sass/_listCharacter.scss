@@ -1,0 +1,136 @@
+@use "./variables";
+@use "./mixin";
+
+.listCharacter{
+    width: 80vw;
+    
+    &_title{
+        display: flex;
+        gap: 16px;
+        margin-bottom: 28px;
+        
+        h3{
+            @include mixin.font24;
+            padding-left: 20px;
+            color: map-get(variables.$colors, aaa);
+        }
+    }
+    
+    .viewAll{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 10px;
+        border-radius: 32px;
+        background-color: map-get(variables.$colors, 31);
+        color: map-get(variables.$colors, aaa);
+        
+        span{
+            font-size: 0.9rem;
+        } 
+    }
+}
+
+.listCharacter_character{
+    min-width: 100%;
+    margin-bottom: 64px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-gap: 16px;
+
+    @include mixin.media(1050px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mixin.media(800px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixin.media(530px){
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+}
+    
+.characters{
+    min-width: 200px;
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: map-get(variables.$colors, 31);
+    border-radius: 8px;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover{
+        background-color: map-get(variables.$colors, 1A);
+    }
+
+
+    img{
+        width: 100%;
+        height: 200px;
+        border-radius: 16px;
+        object-fit: cover;
+    }
+
+    a{
+        width: 125px;
+        height: 32px;
+        border-radius: 32px;
+        padding: 6px 6px;
+        align-self: end;
+        display: flex;
+        align-items: center;
+        background-color: map-get(variables.$colors, 11B);
+        color: map-get(variables.$colors, aaa);
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        img{
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover{
+            width: 125px;
+            height: 32px;
+            border-radius: 32px;
+            padding: 6px 6px;
+            background-color: map-get(variables.$colors, 31);
+        }
+    }
+
+}
+
+.characterText{
+    width: 100%;
+    color: map-get(variables.$colors, aaa);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5px;
+
+        h2{
+            @include mixin.font16;
+            font-weight: 600;
+        }
+
+        p{
+            @include mixin.font16;
+            img{
+                width:16px;
+                height: 16px;
+                margin-right: 5px;
+            }
+        }
+}
+

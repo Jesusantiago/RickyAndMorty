@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty - using API</title>
+
+    <link rel="stylesheet" href="./public/style.css">
+    <link rel="shortcut icon" href="./src/favicon.png" type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+
+</head>
+<body class="body">
+    
+    <header class="header">
+        <div class="header_title">
+            <a href="#">
+                <img src="./src/logo/LogoA.png">
+            </a>
+            <div class="header_title_btn">
+                <img src="./src/icon/Heart-1.png" >
+                <h4>Lista de favoritos</h4>
+            </div>
+        </div>
+
+        <div class="header_content">
+            <div class="header_text">
+                <h3 >Discover it in one place</h3>
+                <p >Characters, locations, episodes y much more.</p>
+
+                <div class="header_text_btn">
+                    <label>
+                        <img src="./src/icon/Moon.png">
+                        <input type="button" value="Oscuro" class="input">
+                    </label>
+                    
+                    <label >
+                        <img src="./src/icon/Sun(1).png">
+                        <input type="button" value="Claro"class="input" >
+                    </label>
+                </div>
+                <h4>Podríamos disfrutarlo un rato. Es decir, mira lo loco que es todo – Morty</h4>
+            </div>
+
+            <div class="header_img">
+            </div>
+        </div>
+    </header>  
+    
+    <main class="main" id="main">
+        <span class="loader" id="loader"></span>
+
+        <section class="filter">
+            <article class="filter_search">
+                <label>
+                    <input type="text" value="Characters, Locations, Episodes ...">
+                    <img src="./src/icon/MagnifyingGlass.png" >
+                </label>
+            </article>
+
+            <article class="filter_btn">
+                <span class="filter_btn_span">Filtrar por:</span>
+                <label>
+                    <img src="./src/icon/SmileyBlank.png">
+                    <input type="btn" value="Characters">
+                </label>
+                
+                
+                <label>
+                    <img src="./src/icon/Planet.png">
+                    <input type="btn" value="Locations">
+                </label>
+                
+                <label>
+                    <img src="./src/icon/Play.png">
+                    <input type="btn" value="Episodes">
+                </label>
+                               
+            </article>
+        </section>
+
+        <section class="listCharacter ">
+            <article class="listCharacter_title"> 
+                <h3>Characters</h3>
+                <div class="viewAll">
+                    <img src="./src/icon/SquaresFour.png">
+                    <span>View all</span>
+                </div>
+            </article>
+
+            <section class="listCharacter_character" id="listCharacter">
+
+            </section>
+
+            <article class="listCharacter_title"> 
+                <h3>Episodes</h3>
+                <div class="viewAll">
+                    <img src="./src/icon/SquaresFour.png">
+                    <span>View all</span>
+                </div>
+            </article>
+
+            <section class="swiper ">
+                <section class="listEpisodes swiper-wrapper" id="listEpisode">
+                </section>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer></footer>
+    <script type="module" src="./src/service/index.js" ></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>

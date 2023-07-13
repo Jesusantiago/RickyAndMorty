@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty - using API</title>
+
+    <link rel="stylesheet" href="./public/style.css">
+    <link rel="shortcut icon" href="./src/favicon.png" type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+</head>
+<body class="body">
+    
+    <header class="header">
+        <div class="header_title">
+            <a href="#">
+                <img src="./src/logo/LogoA.png">
+            </a>
+            <div class="header_title_btn">
+                <img src="./src/icon/Heart-1.png" >
+                <h4>Lista de favoritos</h4>
+            </div>
+        </div>
+
+        <div class="header_content">
+            <div class="header_text">
+                <h3 >Discover it in one place</h3>
+                <p >Characters, locations, episodes y much more.</p>
+
+                <div class="header_text_btn">
+                    <label>
+                        <img src="./src/icon/Moon.png">
+                        <input type="button" value="Oscuro" class="input">
+                    </label>
+                    
+                    <label >
+                        <img src="./src/icon/Sun(1).png">
+                        <input type="button" value="Claro"class="input" >
+                    </label>
+                </div>
+                <h4>Podríamos disfrutarlo un rato. Es decir, mira lo loco que es todo – Morty</h4>
+            </div>
+
+            <div class="header_img">
+                <!-- <img src="./src/logo/Portada.png"> -->
+            </div>
+
+
+        </div>
+    </header> 
+    
+    <main class="mainCharacters" id="main">
+
+        <span class="loader" id="loader"></span>
+        <box-icon name='invader' type='solid' color="#A458A6" ></box-icon>
+        <box-icon name='planet' color="#A458A6"></box-icon>
+        <box-icon name='chevrons-up' color="#A4F22E"></box-icon>
+    </main>
+
+    <footer></footer>
+    <script type="module" src="./src/service/details.js" ></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</body>
+</html>

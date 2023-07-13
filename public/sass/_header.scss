@@ -1,0 +1,202 @@
+@use "./variables";
+@use "./mixin";
+@use "sass:map";
+
+.header{
+    max-width: 100vw;
+    height: 580px;
+    background-color: #000;
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    @include mixin.media(700px){
+        height: 80svh;
+    }
+}
+
+.header_title{
+    min-width: 80%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:198px;
+
+    @include mixin.media(700px){
+        flex-direction: column;
+    }
+
+
+    a{
+        height: 100%;
+
+        img{
+            min-width: 150px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_btn{
+        width: 157px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+        color: map-get(variables.$colors, aaa);
+        background-color: map-get(variables.$colors, 11B);
+        border-radius: 32px;
+        padding: 6px 15px;
+
+        @include mixin.media(700px){
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            justify-content: center;
+            position: absolute;
+            top: 70px;
+            right: 10vw;
+        }
+
+        img{
+            width: 24px;
+            height: 24px;
+        }
+        
+        h4{
+            @include mixin.font14;
+            height: 0.8rem;
+            font-weight: 400;
+            line-height: 0.9rem;
+
+            @include mixin.media(700px){
+                display: none;
+            }
+        }
+    }
+}
+
+.header_content{
+    width: 80vw;
+    height: 434px;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+
+    @include mixin.media(700px){
+        flex-direction: column;
+        height: 90%;
+        gap: 0;
+    }
+    
+
+    .header_text{
+        min-width: 300px;
+        width: 100%;
+        max-width: 374px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 36px 0 80px ;
+
+        @include mixin.media(700px){
+            width: 100%;
+            height: 300px;
+            padding: 36px 0 0;
+        }
+
+        
+        h3{
+            @include mixin.font48;
+            width: 90%;
+            line-height: 3rem;
+            color: map-get(variables.$colors, aaa );
+        }
+
+        p{
+            color: map-get(variables.$colors, aaa );
+            @include mixin.font16;
+        }
+    }
+
+    .header_text_btn{
+        min-height: 98px;
+        
+        @include mixin.media(700px){
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            top: 60svh;
+            right: 8vw;
+            height: 80px;
+        }
+
+    
+        label{
+            display: inline-flex;
+            width: 90px;
+            border: none;
+            border-radius: 15px;
+            padding: 5px;
+
+            @include mixin.media(700px){
+                
+                width: 35px;
+                border-radius: 32px;
+            }
+
+            &:nth-child(1){
+                background-color: map-get(variables.$colors, 11B);
+                margin-right: 16px;
+            }
+
+            &:nth-child(2){
+                background-color: map-get(variables.$colors, 31);
+            }
+            
+            input{
+                width: 100%;
+                background-color:transparent;
+                color: map-get(variables.$colors, aaa);
+                border: none;
+
+            @include mixin.media(700px){
+                display: none;
+            }
+
+            }
+            }
+    
+        };
+        h4{
+        color: map-get(variables.$colors, 11B);
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 1rem;
+        }
+
+}
+
+.header_img{
+    min-width: 270px;
+    width: 100%;
+    max-width: 500px;
+    background-image: url(../../src/logo/Portada.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include mixin.media(700px){
+        height: 38vh;
+        align-self: center;
+    }
+
+   
+}

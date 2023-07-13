@@ -1,0 +1,22 @@
+{
+  "name": "rickyandmorty",
+  "version": "1.0.0",
+  "description": "It is a proyect of Api's Rick And Morty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesusantiago/RickyAndMorty.git"
+  },
+  "author": "Jesus Santiago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jesusantiago/RickyAndMorty/issues"
+  },
+  "homepage": "https://github.com/Jesusantiago/RickyAndMorty#readme",
+  "devDependencies": {
+    "sass": "^1.63.6"
+  }
+}

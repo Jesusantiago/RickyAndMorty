@@ -1,0 +1,3 @@
+Falta decidir como hacer la view de los episodios y lugares.
+Falta hacer la view de la character detail
+Corregír el swiper.js
